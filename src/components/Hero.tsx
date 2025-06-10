@@ -4,121 +4,81 @@ import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
-    <section className="pt-28 pb-20 bg-gradient-to-br from-background via-slate-50 to-blue-50 relative overflow-hidden">
+    <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 via-blue-50 to-green-50 relative overflow-hidden">
       {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-20 left-10 w-40 h-40 bg-accent rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-10 w-48 h-48 bg-secondary rounded-full blur-3xl"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-primary rounded-full blur-3xl"></div>
+      <div className="absolute inset-0 opacity-30">
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-gradient-to-r from-blue-400 to-green-400 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-green-400 to-blue-400 rounded-full blur-3xl"></div>
       </div>
       
-      <div className="container mx-auto px-4 lg:px-6 relative">
-        <div className="grid grid-cols-1 xl:grid-cols-2 gap-16 items-center">
-          {/* Text Content */}
-          <div className="space-y-10">
-            <div className="space-y-8">
-              <div className="inline-flex items-center px-6 py-3 rounded-full bg-accent/15 text-accent text-base font-semibold border border-accent/20">
-                🌱 Sustainable Solutions for MENA
-              </div>
-              <h1 className="text-5xl lg:text-6xl xl:text-7xl font-heading font-bold leading-tight text-primary text-shadow">
-                Empowering the Middle East with
-                <span className="block gradient-primary bg-clip-text text-transparent mt-2">
-                  Sustainable Solutions
-                </span>
-              </h1>
-              <p className="text-xl lg:text-2xl text-slate-600 leading-relaxed max-w-2xl">
-                Innovative technologies in energy, water, and infrastructure for a greener tomorrow. 
-                XERIC delivers cutting-edge solutions across the MENA region with environmental 
-                responsibility and operational excellence.
-              </p>
-            </div>
-
-            <div className="flex flex-col sm:flex-row gap-6">
-              <Link 
-                to="/verticals"
-                className="inline-flex items-center justify-center px-10 py-5 gradient-primary text-white rounded-xl hover:opacity-90 hover:scale-105 transition-all duration-300 font-semibold text-lg shadow-xl"
-              >
-                Discover Our Solutions
-                <ArrowRight className="ml-3" size={24} />
-              </Link>
-              <button className="inline-flex items-center justify-center px-10 py-5 border-2 border-primary text-primary rounded-xl hover:bg-primary hover:text-white transition-all duration-300 font-semibold text-lg">
-                <Play className="mr-3" size={24} />
-                Watch Video
-              </button>
-            </div>
-
-            {/* Key Stats */}
-            <div className="grid grid-cols-3 gap-8 pt-8 border-t border-border">
-              <div className="text-center">
-                <div className="text-4xl lg:text-5xl font-heading font-bold gradient-primary bg-clip-text text-transparent">
-                  7+
-                </div>
-                <div className="text-base text-slate-600 font-medium mt-2">Service Areas</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl lg:text-5xl font-heading font-bold gradient-accent bg-clip-text text-transparent">
-                  2018
-                </div>
-                <div className="text-base text-slate-600 font-medium mt-2">Established</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl lg:text-5xl font-heading font-bold gradient-orange bg-clip-text text-transparent">
-                  MENA
-                </div>
-                <div className="text-base text-slate-600 font-medium mt-2">Region Focus</div>
-              </div>
-            </div>
+      <div className="container mx-auto px-6 lg:px-8 relative z-10">
+        <div className="max-w-5xl mx-auto text-center space-y-12">
+          
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 px-6 py-3 bg-white/80 backdrop-blur-sm rounded-full border border-green-200 shadow-lg">
+            <span className="text-2xl">🌱</span>
+            <span className="text-green-700 font-semibold text-lg">Sustainable Solutions for MENA</span>
           </div>
 
-          {/* Visual Content */}
-          <div className="relative">
-            <div className="absolute inset-0 gradient-accent rounded-3xl blur-3xl opacity-20"></div>
-            <div className="relative glass rounded-3xl p-8 shadow-2xl">
-              <div className="space-y-8">
-                {/* Header */}
-                <div className="flex items-center justify-between">
-                  <div className="h-6 gradient-primary rounded-lg w-48"></div>
-                  <div className="w-4 h-4 bg-accent rounded-full animate-pulse"></div>
-                </div>
-                
-                {/* Service Cards Grid */}
-                <div className="grid grid-cols-2 gap-6">
-                  <div className="bg-blue-50 rounded-xl p-6 space-y-4 border border-blue-100">
-                    <div className="w-12 h-12 bg-secondary rounded-xl shadow-md"></div>
-                    <div className="h-3 bg-secondary/40 rounded-lg w-3/4"></div>
-                    <div className="h-3 bg-secondary/25 rounded-lg w-1/2"></div>
-                  </div>
-                  <div className="bg-green-50 rounded-xl p-6 space-y-4 border border-green-100">
-                    <div className="w-12 h-12 bg-accent rounded-xl shadow-md"></div>
-                    <div className="h-3 bg-accent/40 rounded-lg w-2/3"></div>
-                    <div className="h-3 bg-accent/25 rounded-lg w-3/4"></div>
-                  </div>
-                </div>
+          {/* Main Heading */}
+          <div className="space-y-6">
+            <h1 className="text-5xl lg:text-7xl xl:text-8xl font-bold leading-tight">
+              <span className="text-slate-900">Empowering the</span>
+              <br />
+              <span className="text-slate-900">Middle East with</span>
+              <br />
+              <span className="bg-gradient-to-r from-blue-600 via-green-600 to-blue-600 bg-clip-text text-transparent">
+                Sustainable Solutions
+              </span>
+            </h1>
+            
+            <p className="text-xl lg:text-2xl text-slate-600 max-w-4xl mx-auto leading-relaxed font-light">
+              Innovative technologies in energy, water, and infrastructure for a greener tomorrow. 
+              XERIC delivers cutting-edge solutions across the MENA region with environmental 
+              responsibility and operational excellence.
+            </p>
+          </div>
 
-                {/* Progress Section */}
-                <div className="gradient-primary rounded-xl p-6 relative overflow-hidden">
-                  <div className="absolute inset-0 bg-white/10"></div>
-                  <div className="relative">
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="h-4 bg-white rounded-lg w-40"></div>
-                      <span className="text-sm text-white font-bold bg-white/20 px-3 py-1 rounded-full">+15% Growth</span>
-                    </div>
-                    <div className="h-3 bg-white/20 rounded-lg overflow-hidden">
-                      <div className="h-3 bg-white rounded-lg w-4/5 transition-all duration-1000"></div>
-                    </div>
-                  </div>
-                </div>
+          {/* Call to Action Buttons */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+            <Link 
+              to="/verticals"
+              className="group inline-flex items-center justify-center px-10 py-5 bg-gradient-to-r from-blue-600 to-green-600 text-white rounded-2xl hover:shadow-2xl hover:scale-105 transition-all duration-300 font-semibold text-lg shadow-xl min-w-[280px]"
+            >
+              Discover Our Solutions
+              <ArrowRight className="ml-3 group-hover:translate-x-1 transition-transform" size={24} />
+            </Link>
+            
+            <button className="group inline-flex items-center justify-center px-10 py-5 bg-white/90 backdrop-blur-sm text-slate-700 rounded-2xl border-2 border-slate-200 hover:border-blue-300 hover:bg-white hover:shadow-xl transition-all duration-300 font-semibold text-lg min-w-[280px]">
+              <Play className="mr-3 text-blue-600 group-hover:scale-110 transition-transform" size={24} />
+              Watch Video
+            </button>
+          </div>
 
-                {/* Certifications */}
-                <div className="flex items-center justify-between pt-4">
-                  <div className="flex space-x-3">
-                    <div className="w-8 h-8 bg-accent rounded-lg shadow-sm"></div>
-                    <div className="w-8 h-8 bg-secondary rounded-lg shadow-sm"></div>
-                    <div className="w-8 h-8 bg-orange rounded-lg shadow-sm"></div>
-                  </div>
-                  <span className="text-sm text-slate-600 font-semibold">ISO Certified</span>
-                </div>
+          {/* Stats Section */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-16 max-w-4xl mx-auto">
+            <div className="bg-white/60 backdrop-blur-sm rounded-3xl p-8 text-center border border-white/50 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="text-5xl lg:text-6xl font-bold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent mb-3">
+                7+
               </div>
+              <div className="text-slate-600 font-semibold text-lg">Service Areas</div>
+              <div className="text-slate-500 text-sm mt-1">Comprehensive solutions</div>
+            </div>
+            
+            <div className="bg-white/60 backdrop-blur-sm rounded-3xl p-8 text-center border border-white/50 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="text-5xl lg:text-6xl font-bold bg-gradient-to-r from-green-600 to-green-800 bg-clip-text text-transparent mb-3">
+                2018
+              </div>
+              <div className="text-slate-600 font-semibold text-lg">Established</div>
+              <div className="text-slate-500 text-sm mt-1">Years of expertise</div>
+            </div>
+            
+            <div className="bg-white/60 backdrop-blur-sm rounded-3xl p-8 text-center border border-white/50 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="text-5xl lg:text-6xl font-bold bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent mb-3">
+                MENA
+              </div>
+              <div className="text-slate-600 font-semibold text-lg">Region Focus</div>
+              <div className="text-slate-500 text-sm mt-1">Specialized knowledge</div>
             </div>
           </div>
         </div>

@@ -9,77 +9,77 @@ const Index = () => {
   const features = [
     {
       icon: <Zap className="w-8 h-8" />,
-      title: "Digital Transformation",
-      description: "Modernize your business operations with cutting-edge technology solutions that drive efficiency and growth."
+      title: "Sustainability Focused",
+      description: "We integrate eco-friendly solutions into every project for minimal environmental impact."
     },
     {
       icon: <Users className="w-8 h-8" />,
-      title: "Expert Team",
-      description: "Work with industry veterans and certified professionals who bring decades of combined experience."
+      title: "Innovation Driven",
+      description: "We bring global, cutting-edge technologies to address regional challenges."
     },
     {
       icon: <Award className="w-8 h-8" />,
-      title: "Proven Results",
-      description: "Track record of 500+ successful projects with measurable ROI and business impact."
+      title: "Reliability & Efficiency",
+      description: "Our long-term service approach ensures maximum system performance."
     },
     {
       icon: <Globe className="w-8 h-8" />,
-      title: "Global Reach",
-      description: "Serving clients worldwide with 24/7 support and localized expertise across multiple regions."
+      title: "Regional Expertise",
+      description: "Deep market knowledge allows us to tailor solutions for the Middle East."
     }
   ];
 
   const services = [
     {
-      title: "AI & Machine Learning",
-      description: "Harness the power of artificial intelligence to automate processes, gain insights, and create intelligent solutions.",
-      benefits: ["Predictive Analytics", "Process Automation", "Intelligent Decision Making", "Cost Reduction"]
+      title: "Water Treatment & Desalination Solutions",
+      description: "Designing and implementing seawater desalination and wastewater treatment systems, including zero liquid discharge, for sustainable water management.",
+      benefits: ["Seawater Desalination", "Wastewater Treatment", "Zero Liquid Discharge", "Water Quality Management"]
     },
     {
-      title: "Cloud Solutions",
-      description: "Migrate, optimize, and scale your infrastructure with enterprise-grade cloud services and architecture.",
-      benefits: ["99.9% Uptime", "Scalable Infrastructure", "Cost Optimization", "Enhanced Security"]
+      title: "Environmental Protection & Pollution Control",
+      description: "Providing advanced pollution control systems, sewage treatment, and trenchless sewer rehabilitation using cutting-edge Japanese technology.",
+      benefits: ["Advanced Pollution Control", "Sewage Treatment", "Trenchless Rehabilitation", "Japanese Technology"]
     },
     {
-      title: "Mobile Development",
-      description: "Create engaging mobile experiences with native and cross-platform applications for iOS and Android.",
-      benefits: ["Cross-Platform Apps", "Native Performance", "User-Centric Design", "App Store Optimization"]
+      title: "Solar Energy Solutions",
+      description: "Designing and installing solar PV systems for residential, commercial, and industrial use with robotic panel cleaning.",
+      benefits: ["Solar PV Systems", "Residential Solutions", "Commercial Projects", "Robotic Cleaning"]
     },
     {
-      title: "Cybersecurity",
-      description: "Protect your digital assets with comprehensive security solutions and proactive threat management.",
-      benefits: ["Threat Detection", "Compliance Management", "Data Protection", "24/7 Monitoring"]
+      title: "Power Generation, Transmission & Distribution",
+      description: "Offering turbines, generators, energy storage, and waste-to-energy solutions with comprehensive maintenance services.",
+      benefits: ["Turbines & Generators", "Energy Storage", "Waste-to-Energy", "Maintenance Services"]
     }
   ];
 
   const testimonials = [
     {
-      name: "Sarah Chen",
-      role: "CTO, FinanceFlow Inc.",
-      content: "TechXplore transformed our legacy banking systems into a modern, cloud-based platform. The results exceeded our expectations with 40% improved efficiency.",
+      name: "Ahmed Al-Rashid",
+      role: "Project Director, Dubai Municipality",
+      content: "XERIC's water treatment solutions have been instrumental in our sustainability initiatives. Their expertise in desalination technology is exceptional.",
       rating: 5,
-      company: "FinanceFlow Inc."
+      company: "Dubai Municipality"
     },
     {
-      name: "Michael Rodriguez",
-      role: "VP of Operations, RetailMax",
-      content: "Their e-commerce solution helped us increase online sales by 300% while improving customer satisfaction. Exceptional team and delivery.",
+      name: "Sarah Hassan",
+      role: "Environmental Manager, ADNOC",
+      content: "Their pollution control systems exceeded our expectations. Professional team with deep understanding of regional environmental challenges.",
       rating: 5,
-      company: "RetailMax"
+      company: "ADNOC"
     },
     {
-      name: "Dr. Emily Johnson",
-      role: "Chief Medical Officer, HealthTech Solutions",
-      content: "The telemedicine platform they developed during the pandemic was crucial for our operations. Reliable, secure, and user-friendly.",
+      name: "Dr. Omar Khalil",
+      role: "Chief Engineer, Masdar City",
+      content: "The solar energy solutions provided by XERIC are cutting-edge. Their maintenance services ensure optimal performance year-round.",
       rating: 5,
-      company: "HealthTech Solutions"
+      company: "Masdar City"
     }
   ];
 
   const stats = [
-    { number: "500+", label: "Projects Completed", description: "Successfully delivered across all verticals" },
-    { number: "50+", label: "Enterprise Clients", description: "Fortune 500 and growing companies" },
-    { number: "99.9%", label: "Uptime Guarantee", description: "Reliable, scalable infrastructure" },
+    { number: "7+", label: "Service Areas", description: "Comprehensive solutions portfolio" },
+    { number: "6", label: "Years Experience", description: "Since 2018 in MENA region" },
+    { number: "ISO", label: "Certified Quality", description: "9001, 14001, OHSAS 18001" },
     { number: "24/7", label: "Support Available", description: "Round-the-clock technical assistance" }
   ];
 
@@ -92,20 +92,21 @@ const Index = () => {
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Choose TechXplore?</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              We combine industry expertise with cutting-edge technology to deliver solutions that drive real business results.
+            <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4 text-primary">Why Choose XERIC?</h2>
+            <p className="text-xl text-foreground/80 max-w-2xl mx-auto">
+              We combine industry expertise with cutting-edge technology to deliver sustainable solutions 
+              that drive real business results across the MENA region.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-card border rounded-xl p-6 text-center hover:shadow-lg transition-all duration-300 group">
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-4 text-white group-hover:scale-110 transition-transform">
+              <div key={index} className="bg-white border border-border rounded-xl p-6 text-center hover:shadow-lg transition-all duration-300 group">
+                <div className="w-16 h-16 gradient-primary rounded-xl flex items-center justify-center mx-auto mb-4 text-white group-hover:scale-110 transition-transform">
                   {feature.icon}
                 </div>
-                <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
-                <p className="text-muted-foreground">{feature.description}</p>
+                <h3 className="text-xl font-heading font-bold mb-3 text-primary">{feature.title}</h3>
+                <p className="text-foreground/80">{feature.description}</p>
               </div>
             ))}
           </div>
@@ -116,30 +117,31 @@ const Index = () => {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Core Services</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Comprehensive technology solutions designed to accelerate your digital transformation journey.
+            <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4 text-primary">Our Services</h2>
+            <p className="text-xl text-foreground/80 max-w-2xl mx-auto">
+              Comprehensive sustainable solutions tailored for the MENA region, delivering innovation 
+              in energy, water, and infrastructure development.
             </p>
           </div>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {services.map((service, index) => (
-              <div key={index} className="bg-card border rounded-2xl p-8 hover:shadow-lg transition-shadow">
-                <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
-                <p className="text-muted-foreground mb-6">{service.description}</p>
+              <div key={index} className="bg-white border border-border rounded-2xl p-8 hover:shadow-lg transition-shadow">
+                <h3 className="text-2xl font-heading font-bold mb-4 text-primary">{service.title}</h3>
+                <p className="text-foreground/80 mb-6">{service.description}</p>
                 
                 <div className="space-y-3">
                   {service.benefits.map((benefit, idx) => (
                     <div key={idx} className="flex items-center gap-3">
-                      <CheckCircle className="w-5 h-5 text-green-500" />
-                      <span className="text-sm">{benefit}</span>
+                      <CheckCircle className="w-5 h-5 text-accent" />
+                      <span className="text-sm text-foreground">{benefit}</span>
                     </div>
                   ))}
                 </div>
                 
                 <Link 
                   to="/contact"
-                  className="inline-flex items-center mt-6 text-primary hover:text-primary/80 font-medium group"
+                  className="inline-flex items-center mt-6 text-primary hover:text-secondary font-medium group"
                 >
                   Learn More 
                   <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -151,14 +153,14 @@ const Index = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600">
+      <section className="py-16 gradient-primary">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center text-white">
             {stats.map((stat, index) => (
               <div key={index} className="space-y-2">
-                <div className="text-4xl md:text-5xl font-bold">{stat.number}</div>
+                <div className="text-4xl md:text-5xl font-heading font-bold">{stat.number}</div>
                 <div className="text-xl font-semibold">{stat.label}</div>
-                <div className="text-blue-100 text-sm">{stat.description}</div>
+                <div className="text-white/80 text-sm">{stat.description}</div>
               </div>
             ))}
           </div>
@@ -169,29 +171,30 @@ const Index = () => {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">What Our Clients Say</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Don't just take our word for it. Here's what industry leaders say about working with TechXplore.
+            <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4 text-primary">What Our Clients Say</h2>
+            <p className="text-xl text-foreground/80 max-w-2xl mx-auto">
+              Don't just take our word for it. Here's what industry leaders across the MENA region 
+              say about working with XERIC.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-card border rounded-xl p-6 hover:shadow-lg transition-shadow">
+              <div key={index} className="bg-white border border-border rounded-xl p-6 hover:shadow-lg transition-shadow">
                 <div className="flex items-center mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                    <Star key={i} className="w-5 h-5 fill-orange text-orange" />
                   ))}
                 </div>
                 
-                <p className="text-muted-foreground mb-6 italic">
+                <p className="text-foreground/80 mb-6 italic">
                   "{testimonial.content}"
                 </p>
                 
                 <div>
-                  <div className="font-semibold">{testimonial.name}</div>
-                  <div className="text-sm text-primary">{testimonial.role}</div>
-                  <div className="text-xs text-muted-foreground">{testimonial.company}</div>
+                  <div className="font-semibold text-primary">{testimonial.name}</div>
+                  <div className="text-sm text-secondary">{testimonial.role}</div>
+                  <div className="text-xs text-foreground/60">{testimonial.company}</div>
                 </div>
               </div>
             ))}
@@ -203,25 +206,26 @@ const Index = () => {
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to Start Your Digital Transformation?
+            <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6 text-primary">
+              Ready to Start Your Sustainable Future?
             </h2>
-            <p className="text-xl text-muted-foreground mb-8">
-              Let's discuss how we can help your business leverage technology for competitive advantage and sustainable growth.
+            <p className="text-xl text-foreground/80 mb-8">
+              Let's discuss how XERIC can help your business leverage sustainable technology 
+              for competitive advantage and environmental responsibility.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 to="/contact"
-                className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:opacity-90 transition-opacity font-medium"
+                className="inline-flex items-center justify-center px-8 py-4 gradient-primary text-white rounded-lg hover:opacity-90 transition-opacity font-medium"
               >
-                Start Your Project
+                Get Your Quote
                 <ArrowRight className="ml-2" size={20} />
               </Link>
               <Link 
                 to="/verticals"
-                className="inline-flex items-center justify-center px-8 py-4 border border-border rounded-lg hover:bg-muted/50 transition-colors font-medium"
+                className="inline-flex items-center justify-center px-8 py-4 border-2 border-primary text-primary rounded-lg hover:bg-primary hover:text-white transition-colors font-medium"
               >
-                Explore Solutions
+                Explore Services
               </Link>
             </div>
           </div>

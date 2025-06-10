@@ -1,3 +1,4 @@
+
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Building, Cpu, Smartphone, Zap, Shield, Cloud, Database, Globe } from 'lucide-react';
@@ -108,48 +109,81 @@ const Verticals = () => {
     <div className="min-h-screen bg-background">
       <Navbar />
       
-      {/* Hero Section */}
-      <section className="pt-24 pb-16 bg-gradient-to-br from-background via-muted/30 to-background">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-heading font-bold mb-6 text-primary">
-              Our{" "}
-              <span className="gradient-primary bg-clip-text text-transparent">
-                Services
-              </span>
-            </h1>
-            <p className="text-xl text-foreground/80 leading-relaxed">
-              Comprehensive sustainable solutions tailored for the MENA region, delivering cutting-edge 
-              technology services that drive environmental responsibility and operational excellence 
-              across multiple industries.
-            </p>
+      {/* Hero Section - Clean Wipro-inspired Design */}
+      <section className="min-h-screen flex items-center justify-center bg-background relative">
+        {/* Subtle Background */}
+        <div className="absolute inset-0 opacity-3">
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-primary rounded-full blur-3xl"></div>
+        </div>
+        
+        <div className="container mx-auto px-6 lg:px-8 relative z-10">
+          <div className="max-w-5xl mx-auto text-center space-y-12">
+            
+            {/* Simple Badge */}
+            <div className="inline-flex items-center gap-3 px-6 py-3 bg-white border border-border rounded-full shadow-sm">
+              <div className="w-2 h-2 bg-accent rounded-full"></div>
+              <span className="text-foreground font-medium">Comprehensive Solutions Portfolio</span>
+            </div>
+            
+            {/* Clean Typography */}
+            <div className="space-y-8">
+              <h1 className="text-6xl md:text-7xl lg:text-8xl font-heading font-light tracking-tight leading-tight">
+                Our{" "}
+                <span className="text-primary font-normal">Services</span>
+              </h1>
+              
+              <p className="text-xl md:text-2xl text-foreground/70 leading-relaxed max-w-4xl mx-auto font-light">
+                Comprehensive sustainable solutions tailored for the MENA region, delivering cutting-edge 
+                technology services that drive environmental responsibility and operational excellence.
+              </p>
+            </div>
+            
+            {/* Minimal Stats */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-8">
+              <div className="text-center space-y-2">
+                <div className="text-4xl font-light text-primary">7+</div>
+                <div className="text-sm text-foreground/60">Service Areas</div>
+              </div>
+              <div className="text-center space-y-2">
+                <div className="text-4xl font-light text-primary">500+</div>
+                <div className="text-sm text-foreground/60">Projects</div>
+              </div>
+              <div className="text-center space-y-2">
+                <div className="text-4xl font-light text-primary">ISO</div>
+                <div className="text-sm text-foreground/60">Certified</div>
+              </div>
+              <div className="text-center space-y-2">
+                <div className="text-4xl font-light text-primary">24/7</div>
+                <div className="text-sm text-foreground/60">Support</div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Services Grid */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <section className="py-32">
+        <div className="container mx-auto px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
             {services.map((service, index) => (
-              <div key={index} className="bg-white border border-border rounded-2xl p-8 hover:shadow-lg transition-all duration-300 group">
+              <div key={index} className="bg-white border border-border rounded-2xl p-10 hover:shadow-lg transition-all duration-300 group">
                 {/* Header */}
-                <div className="flex items-start gap-4 mb-6">
-                  <div className={`w-16 h-16 gradient-primary rounded-xl flex items-center justify-center text-white group-hover:scale-110 transition-transform`}>
+                <div className="flex items-start gap-6 mb-8">
+                  <div className="w-16 h-16 bg-primary rounded-xl flex items-center justify-center text-white group-hover:scale-110 transition-transform">
                     {service.icon}
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-2xl font-heading font-bold mb-2 text-primary">{service.title}</h3>
-                    <p className="text-foreground/80">{service.description}</p>
+                    <h3 className="text-2xl font-heading font-bold mb-3 text-primary">{service.title}</h3>
+                    <p className="text-foreground/80 leading-relaxed">{service.description}</p>
                   </div>
                 </div>
 
                 {/* Features */}
-                <div className="mb-6">
-                  <h4 className="font-heading font-bold mb-3 text-primary">Key Solutions:</h4>
-                  <ul className="space-y-2">
+                <div className="mb-8">
+                  <h4 className="font-heading font-bold mb-4 text-primary">Key Solutions:</h4>
+                  <ul className="space-y-3">
                     {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center gap-2 text-sm">
+                      <li key={idx} className="flex items-center gap-3">
                         <div className="w-1.5 h-1.5 bg-accent rounded-full"></div>
                         <span className="text-foreground/80">{feature}</span>
                       </li>
@@ -159,12 +193,12 @@ const Verticals = () => {
 
                 {/* Technologies */}
                 <div>
-                  <h4 className="font-heading font-bold mb-3 text-primary">Technologies:</h4>
-                  <div className="flex flex-wrap gap-2">
+                  <h4 className="font-heading font-bold mb-4 text-primary">Technologies:</h4>
+                  <div className="flex flex-wrap gap-3">
                     {service.technologies.map((tech, idx) => (
                       <span 
                         key={idx} 
-                        className="px-3 py-1 bg-secondary/10 text-secondary rounded-full text-xs font-medium"
+                        className="px-3 py-2 bg-secondary/10 text-secondary rounded-lg text-sm font-medium"
                       >
                         {tech}
                       </span>
@@ -178,21 +212,21 @@ const Verticals = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6 text-primary">
+      <section className="py-32 bg-muted/30">
+        <div className="container mx-auto px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center space-y-8">
+            <h2 className="text-4xl md:text-5xl font-heading font-light text-primary">
               Ready to Transform Your Operations?
             </h2>
-            <p className="text-xl text-foreground/80 mb-8">
+            <p className="text-xl text-foreground/70 leading-relaxed">
               Partner with XERIC to leverage cutting-edge sustainable technology solutions 
               tailored to your industry's unique needs across the MENA region.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 gradient-primary text-white rounded-lg hover:opacity-90 transition-opacity font-medium">
+            <div className="flex flex-col sm:flex-row gap-6 justify-center pt-4">
+              <button className="px-10 py-4 bg-primary text-white rounded-lg hover:bg-primary/90 transition-all font-medium">
                 Schedule Consultation
               </button>
-              <button className="px-8 py-4 border-2 border-primary text-primary rounded-lg hover:bg-primary hover:text-white transition-colors font-medium">
+              <button className="px-10 py-4 border border-border text-foreground rounded-lg hover:bg-muted/50 transition-all font-medium">
                 Download Brochure
               </button>
             </div>

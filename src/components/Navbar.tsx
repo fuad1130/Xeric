@@ -64,13 +64,13 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 glass border-b border-border/30 shadow-lg backdrop-blur-xl">
       <div className="container mx-auto px-4 lg:px-6">
         <div className="flex items-center justify-between h-20">
-          {/* Logo with proper visibility and styling */}
+          {/* Logo with the new XERIC logo */}
           <Link to="/" className="flex items-center space-x-3 group">
             <div className="relative flex-shrink-0">
               <img 
-                src="/lovable-uploads/b0ce65ad-b3b0-4ba6-82dd-ee8c79c05962.png" 
+                src="/lovable-uploads/e89d63d2-e31b-443a-bf94-ad8b75361320.png" 
                 alt="XERIC Logo" 
-                className="h-14 w-auto object-contain group-hover:scale-110 transition-transform duration-300 filter brightness-100"
+                className="h-14 w-auto object-contain group-hover:scale-110 transition-transform duration-300"
                 style={{ maxHeight: '56px' }}
                 onError={(e) => {
                   console.log('Logo failed to load:', e);

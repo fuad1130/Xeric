@@ -1,58 +1,64 @@
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Users, Target, Award, Lightbulb, ArrowDown } from 'lucide-react';
-
 const About = () => {
-  const values = [
-    {
-      icon: <Lightbulb className="w-8 h-8" />,
-      title: "Innovation Driven",
-      description: "We bring global, cutting-edge technologies to address regional challenges in the MENA market."
-    },
-    {
-      icon: <Users className="w-8 h-8" />,
-      title: "Sustainability Focused",
-      description: "We integrate eco-friendly solutions into every project for minimal environmental impact."
-    },
-    {
-      icon: <Target className="w-8 h-8" />,
-      title: "Reliability & Efficiency",
-      description: "Our long-term service approach ensures maximum system performance and operational excellence."
-    },
-    {
-      icon: <Award className="w-8 h-8" />,
-      title: "Regional Expertise",
-      description: "Deep market knowledge allows us to tailor solutions specifically for the Middle East and North Africa."
-    }
-  ];
-
-  const certifications = [
-    {
-      name: "ISO 9001:2015",
-      description: "Quality Management System certification ensuring consistent quality in all our services and deliverables."
-    },
-    {
-      name: "ISO 14001:2015", 
-      description: "Environmental Management System certification demonstrating our commitment to environmental responsibility."
-    },
-    {
-      name: "OHSAS 18001",
-      description: "Occupational Health and Safety certification ensuring safe working environments for all our projects."
-    }
-  ];
-
-  const milestones = [
-    { year: "2018", event: "Company Founded", description: "XERIC Trading and Services L.L.C. established in Dubai, UAE with License No. 1469895" },
-    { year: "2019", event: "First Major Project", description: "Secured first large-scale water treatment project in the UAE" },
-    { year: "2020", event: "ISO Certifications", description: "Achieved ISO 9001, 14001, and OHSAS 18001 certifications" },
-    { year: "2021", event: "Solar Division Launch", description: "Expanded services to include comprehensive solar energy solutions" },
-    { year: "2022", event: "Regional Expansion", description: "Extended operations across MENA region with strategic partnerships" },
-    { year: "2023", event: "Environmental Innovation", description: "Launched advanced pollution control systems using Japanese technology" },
-    { year: "2024", event: "Sustainable Leadership", description: "Recognized as leading provider of sustainable infrastructure solutions" }
-  ];
-
-  return (
-    <div className="min-h-screen bg-background">
+  const values = [{
+    icon: <Lightbulb className="w-8 h-8" />,
+    title: "Innovation Driven",
+    description: "We bring global, cutting-edge technologies to address regional challenges in the MENA market."
+  }, {
+    icon: <Users className="w-8 h-8" />,
+    title: "Sustainability Focused",
+    description: "We integrate eco-friendly solutions into every project for minimal environmental impact."
+  }, {
+    icon: <Target className="w-8 h-8" />,
+    title: "Reliability & Efficiency",
+    description: "Our long-term service approach ensures maximum system performance and operational excellence."
+  }, {
+    icon: <Award className="w-8 h-8" />,
+    title: "Regional Expertise",
+    description: "Deep market knowledge allows us to tailor solutions specifically for the Middle East and North Africa."
+  }];
+  const certifications = [{
+    name: "ISO 9001:2015",
+    description: "Quality Management System certification ensuring consistent quality in all our services and deliverables."
+  }, {
+    name: "ISO 14001:2015",
+    description: "Environmental Management System certification demonstrating our commitment to environmental responsibility."
+  }, {
+    name: "OHSAS 18001",
+    description: "Occupational Health and Safety certification ensuring safe working environments for all our projects."
+  }];
+  const milestones = [{
+    year: "2018",
+    event: "Company Founded",
+    description: "XERIC Trading and Services L.L.C. established in Dubai, UAE with License No. 1469895"
+  }, {
+    year: "2019",
+    event: "First Major Project",
+    description: "Secured first large-scale water treatment project in the UAE"
+  }, {
+    year: "2020",
+    event: "ISO Certifications",
+    description: "Achieved ISO 9001, 14001, and OHSAS 18001 certifications"
+  }, {
+    year: "2021",
+    event: "Solar Division Launch",
+    description: "Expanded services to include comprehensive solar energy solutions"
+  }, {
+    year: "2022",
+    event: "Regional Expansion",
+    description: "Extended operations across MENA region with strategic partnerships"
+  }, {
+    year: "2023",
+    event: "Environmental Innovation",
+    description: "Launched advanced pollution control systems using Japanese technology"
+  }, {
+    year: "2024",
+    event: "Sustainable Leadership",
+    description: "Recognized as leading provider of sustainable infrastructure solutions"
+  }];
+  return <div className="min-h-screen bg-background">
       <Navbar />
       
       {/* Hero Section - Redesigned */}
@@ -75,9 +81,7 @@ const About = () => {
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-heading font-bold mb-8">
               About{" "}
               <span className="relative">
-                <span className="gradient-primary bg-clip-text text-transparent">
-                  XERIC
-                </span>
+                <span className="gradient-primary bg-clip-text text-neutral-950">US </span>
                 <div className="absolute -bottom-2 left-0 right-0 h-1 gradient-primary rounded-full opacity-30"></div>
               </span>
             </h1>
@@ -163,15 +167,13 @@ const About = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {values.map((value, index) => (
-              <div key={index} className="bg-white border border-border rounded-xl p-6 text-center hover:shadow-lg transition-shadow">
+            {values.map((value, index) => <div key={index} className="bg-white border border-border rounded-xl p-6 text-center hover:shadow-lg transition-shadow">
                 <div className="w-16 h-16 gradient-primary rounded-xl flex items-center justify-center mx-auto mb-4 text-white">
                   {value.icon}
                 </div>
                 <h3 className="text-xl font-heading font-bold mb-3 text-primary">{value.title}</h3>
                 <p className="text-foreground/80">{value.description}</p>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -189,8 +191,7 @@ const About = () => {
           
           <div className="max-w-4xl mx-auto">
             <div className="space-y-8">
-              {milestones.map((milestone, index) => (
-                <div key={index} className="flex flex-col md:flex-row gap-6 items-start">
+              {milestones.map((milestone, index) => <div key={index} className="flex flex-col md:flex-row gap-6 items-start">
                   <div className="flex-shrink-0">
                     <div className="w-16 h-16 gradient-primary rounded-full flex items-center justify-center text-white font-bold text-lg">
                       {milestone.year}
@@ -200,8 +201,7 @@ const About = () => {
                     <h3 className="text-xl font-heading font-bold mb-2 text-primary">{milestone.event}</h3>
                     <p className="text-foreground/80">{milestone.description}</p>
                   </div>
-                </div>
-              ))}
+                </div>)}
             </div>
           </div>
         </div>
@@ -219,15 +219,13 @@ const About = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {certifications.map((cert, index) => (
-              <div key={index} className="bg-white border border-border rounded-xl p-6 text-center hover:shadow-lg transition-shadow">
+            {certifications.map((cert, index) => <div key={index} className="bg-white border border-border rounded-xl p-6 text-center hover:shadow-lg transition-shadow">
                 <div className="w-16 h-16 gradient-accent rounded-xl flex items-center justify-center mx-auto mb-4">
                   <Award className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-heading font-bold mb-3 text-primary">{cert.name}</h3>
                 <p className="text-foreground/80">{cert.description}</p>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -274,8 +272,6 @@ const About = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default About;

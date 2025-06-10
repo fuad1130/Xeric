@@ -4,6 +4,8 @@ import Hero from '@/components/Hero';
 import Footer from '@/components/Footer';
 import { ArrowRight, CheckCircle, Star, Users, Award, Globe, Zap, Droplets, Sun, Building, Truck } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { cn } from "@/lib/utils";
+import { Marquee } from "@/components/magicui/marquee";
 
 const Index = () => {
   const features = [
@@ -63,7 +65,7 @@ const Index = () => {
       company: "Dubai Municipality",
       content: "XERIC's water treatment solutions have been instrumental in our sustainability initiatives. Their expertise in desalination technology is exceptional and has exceeded our expectations.",
       rating: 5,
-      avatar: "AR"
+      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face"
     },
     {
       name: "Sarah Hassan",
@@ -71,7 +73,7 @@ const Index = () => {
       company: "ADNOC",
       content: "Their pollution control systems exceeded our expectations. Professional team with deep understanding of regional environmental challenges and innovative solutions.",
       rating: 5,
-      avatar: "SH"
+      avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b8c5?w=100&h=100&fit=crop&crop=face"
     },
     {
       name: "Dr. Omar Khalil",
@@ -79,9 +81,89 @@ const Index = () => {
       company: "Masdar City",
       content: "The solar energy solutions provided by XERIC are cutting-edge. Their maintenance services ensure optimal performance year-round with measurable results.",
       rating: 5,
-      avatar: "OK"
+      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face"
+    },
+    {
+      name: "Fatima Al-Zahra",
+      role: "Operations Director",
+      company: "Emirates Water",
+      content: "Outstanding water treatment technology implementation. The zero liquid discharge system has transformed our operational efficiency and environmental compliance.",
+      rating: 5,
+      avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face"
+    },
+    {
+      name: "Hassan Al-Mahmoud",
+      role: "Sustainability Manager",
+      company: "Qatar Energy",
+      content: "XERIC's comprehensive approach to energy solutions is remarkable. Their team delivered beyond expectations with innovative sustainable technologies.",
+      rating: 5,
+      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face"
+    },
+    {
+      name: "Layla Abdulla",
+      role: "Project Manager",
+      company: "DEWA",
+      content: "Exceptional service quality and technical expertise. The solar installations have exceeded performance targets while maintaining the highest safety standards.",
+      rating: 5,
+      avatar: "https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=100&h=100&fit=crop&crop=face"
     }
   ];
+
+  const firstRow = testimonials.slice(0, testimonials.length / 2);
+  const secondRow = testimonials.slice(testimonials.length / 2);
+
+  const TestimonialCard = ({
+    avatar,
+    name,
+    role,
+    company,
+    content,
+    rating,
+  }: {
+    avatar: string;
+    name: string;
+    role: string;
+    company: string;
+    content: string;
+    rating: number;
+  }) => {
+    return (
+      <figure
+        className={cn(
+          "relative h-full w-80 cursor-pointer overflow-hidden rounded-2xl border p-6 mx-2",
+          "border-slate-200 bg-white hover:bg-slate-50/80 transition-all duration-300",
+          "hover:shadow-xl hover:-translate-y-1"
+        )}
+      >
+        <div className="flex items-center mb-4">
+          {[...Array(rating)].map((_, i) => (
+            <Star key={i} className="w-5 h-5 fill-orange text-orange" />
+          ))}
+        </div>
+        
+        <blockquote className="text-slate-600 mb-6 text-base leading-relaxed italic">
+          "{content}"
+        </blockquote>
+        
+        <div className="flex items-center gap-4">
+          <img 
+            className="rounded-full border-2 border-slate-200" 
+            width="48" 
+            height="48" 
+            alt={`${name} avatar`} 
+            src={avatar} 
+          />
+          <div>
+            <figcaption className="text-lg font-bold text-primary">
+              {name}
+            </figcaption>
+            <p className="text-secondary font-medium">{role}</p>
+            <p className="text-slate-500 text-sm">{company}</p>
+          </div>
+        </div>
+      </figure>
+    );
+  };
 
   const stats = [
     { number: "7+", label: "Service Areas", description: "Comprehensive solutions portfolio" },
@@ -183,7 +265,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Testimonials Section */}
+      {/* Testimonials Section with Smooth Marquee */}
       <section className="py-20 bg-slate-50">
         <div className="container mx-auto px-4 lg:px-6">
           <div className="text-center mb-16">
@@ -194,31 +276,19 @@ const Index = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-white border border-slate-200 rounded-2xl p-8 hover:shadow-xl transition-all duration-300">
-                <div className="flex items-center mb-6">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-6 h-6 fill-orange text-orange" />
-                  ))}
-                </div>
-                
-                <p className="text-slate-600 mb-8 text-lg leading-relaxed italic">
-                  "{testimonial.content}"
-                </p>
-                
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white font-bold">
-                    {testimonial.avatar}
-                  </div>
-                  <div>
-                    <div className="font-bold text-primary text-lg">{testimonial.name}</div>
-                    <div className="text-secondary font-medium">{testimonial.role}</div>
-                    <div className="text-slate-500 text-sm">{testimonial.company}</div>
-                  </div>
-                </div>
-              </div>
-            ))}
+          <div className="relative flex w-full flex-col items-center justify-center overflow-hidden rounded-xl">
+            <Marquee pauseOnHover className="[--duration:40s] py-4">
+              {firstRow.map((testimonial) => (
+                <TestimonialCard key={testimonial.name} {...testimonial} />
+              ))}
+            </Marquee>
+            <Marquee reverse pauseOnHover className="[--duration:40s] py-4">
+              {secondRow.map((testimonial) => (
+                <TestimonialCard key={testimonial.name} {...testimonial} />
+              ))}
+            </Marquee>
+            <div className="pointer-events-none absolute inset-y-0 left-0 w-1/6 bg-gradient-to-r from-slate-50"></div>
+            <div className="pointer-events-none absolute inset-y-0 right-0 w-1/6 bg-gradient-to-l from-slate-50"></div>
           </div>
         </div>
       </section>

@@ -64,17 +64,21 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 glass border-b border-border/30 shadow-lg backdrop-blur-xl">
       <div className="container mx-auto px-4 lg:px-6">
         <div className="flex items-center justify-between h-20">
-          {/* Logo with enhanced micro-interaction */}
+          {/* Logo with your actual XERIC logo */}
           <Link to="/" className="flex items-center space-x-4 group">
-            <div className="w-12 h-12 gradient-primary rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300 ease-out">
-              <span className="text-white font-bold text-xl group-hover:rotate-12 transition-transform duration-300">X</span>
+            <div className="relative">
+              <img 
+                src="/lovable-uploads/a6bb8ad6-f5e0-41c1-b633-e16c28b32e16.png" 
+                alt="XERIC Logo" 
+                className="h-12 w-auto group-hover:scale-110 transition-transform duration-300"
+              />
             </div>
             <div className="flex flex-col">
               <span className="text-2xl font-heading font-bold text-primary group-hover:text-secondary transition-colors duration-300">
                 XERIC
               </span>
               <span className="text-sm text-muted-foreground -mt-1 font-medium group-hover:text-accent transition-colors duration-300">
-                Powering a Sustainable Future
+                Trading and Services L.L.C.
               </span>
             </div>
           </Link>

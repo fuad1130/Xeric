@@ -9,10 +9,12 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="col-span-1 md:col-span-2">
-            <div className="flex items-center space-x-3 mb-6">
-              <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
-                <span className="text-primary font-bold text-lg">X</span>
-              </div>
+            <div className="flex items-center space-x-4 mb-6">
+              <img 
+                src="/lovable-uploads/a6bb8ad6-f5e0-41c1-b633-e16c28b32e16.png" 
+                alt="XERIC Logo" 
+                className="h-12 w-auto"
+              />
               <div className="flex flex-col">
                 <span className="text-xl font-heading font-bold">
                   XERIC Trading and Services L.L.C.

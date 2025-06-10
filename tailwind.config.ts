@@ -26,49 +26,49 @@ export default {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				primary: {
-					DEFAULT: '#14518E', // Enhanced deep blue
+					DEFAULT: '#1B365D', // XERIC Navy Blue
+					foreground: '#FFFFFF',
+					50: '#F0F3F8',
+					100: '#E1E7F0',
+					200: '#C3CFE1',
+					300: '#A5B7D2',
+					400: '#879FC3',
+					500: '#1B365D',
+					600: '#162B4A',
+					700: '#112037',
+					800: '#0C1524',
+					900: '#070A11'
+				},
+				secondary: {
+					DEFAULT: '#2563EB', // XERIC Bright Blue
 					foreground: '#FFFFFF',
 					50: '#EFF6FF',
 					100: '#DBEAFE',
 					200: '#BFDBFE',
 					300: '#93C5FD',
 					400: '#60A5FA',
-					500: '#14518E',
+					500: '#2563EB',
 					600: '#1D4ED8',
 					700: '#1E40AF',
 					800: '#1E3A8A',
 					900: '#1E293B'
 				},
-				secondary: {
-					DEFAULT: '#3B82F6', // Vibrant light blue
+				accent: {
+					DEFAULT: '#2563EB', // Using bright blue as accent
 					foreground: '#FFFFFF',
 					50: '#EFF6FF',
 					100: '#DBEAFE',
 					200: '#BFDBFE',
 					300: '#93C5FD',
 					400: '#60A5FA',
-					500: '#3B82F6',
-					600: '#2563EB',
-					700: '#1D4ED8',
-					800: '#1E40AF',
-					900: '#1E3A8A'
-				},
-				accent: {
-					DEFAULT: '#10B981', // More vibrant green
-					foreground: '#FFFFFF',
-					50: '#ECFDF5',
-					100: '#D1FAE5',
-					200: '#A7F3D0',
-					300: '#6EE7B7',
-					400: '#34D399',
-					500: '#10B981',
-					600: '#059669',
-					700: '#047857',
-					800: '#065F46',
-					900: '#064E3B'
+					500: '#2563EB',
+					600: '#1D4ED8',
+					700: '#1E40AF',
+					800: '#1E3A8A',
+					900: '#1E293B'
 				},
 				orange: {
-					DEFAULT: '#F97316', // Orange accent
+					DEFAULT: '#F97316', // Orange accent for highlights
 					foreground: '#FFFFFF',
 					50: '#FFF7ED',
 					100: '#FFEDD5',
@@ -91,11 +91,11 @@ export default {
 				},
 				card: {
 					DEFAULT: '#FFFFFF',
-					foreground: '#14518E'
+					foreground: '#1B365D'
 				},
 				popover: {
 					DEFAULT: '#FFFFFF',
-					foreground: '#14518E'
+					foreground: '#1B365D'
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',

@@ -64,20 +64,26 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 glass border-b border-border/30 shadow-lg backdrop-blur-xl">
       <div className="container mx-auto px-4 lg:px-6">
         <div className="flex items-center justify-between h-20">
-          {/* Logo with your actual XERIC logo */}
-          <Link to="/" className="flex items-center space-x-4 group">
-            <div className="relative">
+          {/* Logo with proper visibility and styling */}
+          <Link to="/" className="flex items-center space-x-3 group">
+            <div className="relative flex-shrink-0">
               <img 
-                src="/lovable-uploads/a6bb8ad6-f5e0-41c1-b633-e16c28b32e16.png" 
+                src="/lovable-uploads/b0ce65ad-b3b0-4ba6-82dd-ee8c79c05962.png" 
                 alt="XERIC Logo" 
-                className="h-12 w-auto group-hover:scale-110 transition-transform duration-300"
+                className="h-14 w-auto object-contain group-hover:scale-110 transition-transform duration-300 filter brightness-100"
+                style={{ maxHeight: '56px' }}
+                onError={(e) => {
+                  console.log('Logo failed to load:', e);
+                  e.currentTarget.style.display = 'none';
+                }}
+                onLoad={() => console.log('Logo loaded successfully')}
               />
             </div>
-            <div className="flex flex-col">
-              <span className="text-2xl font-heading font-bold text-primary group-hover:text-secondary transition-colors duration-300">
+            <div className="hidden sm:flex flex-col">
+              <span className="text-xl lg:text-2xl font-heading font-bold text-primary group-hover:text-secondary transition-colors duration-300">
                 XERIC
               </span>
-              <span className="text-sm text-muted-foreground -mt-1 font-medium group-hover:text-accent transition-colors duration-300">
+              <span className="text-xs lg:text-sm text-muted-foreground -mt-1 font-medium group-hover:text-accent transition-colors duration-300">
                 Trading and Services L.L.C.
               </span>
             </div>

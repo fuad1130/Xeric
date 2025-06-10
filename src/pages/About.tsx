@@ -1,7 +1,6 @@
-
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { Users, Target, Award, Lightbulb } from 'lucide-react';
+import { Users, Target, Award, Lightbulb, ArrowDown } from 'lucide-react';
 
 const About = () => {
   const values = [
@@ -56,27 +55,73 @@ const About = () => {
     <div className="min-h-screen bg-background">
       <Navbar />
       
-      {/* Hero Section */}
-      <section className="pt-24 pb-16 bg-gradient-to-br from-background via-muted/30 to-background">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-heading font-bold mb-6 text-primary">
+      {/* Hero Section - Redesigned */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-accent/5"></div>
+        <div className="absolute top-20 right-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 left-10 w-96 h-96 bg-accent/10 rounded-full blur-3xl"></div>
+        
+        {/* Content */}
+        <div className="relative z-10 container mx-auto px-4 text-center">
+          <div className="max-w-5xl mx-auto">
+            {/* Badge */}
+            <div className="inline-flex items-center px-4 py-2 bg-primary/10 border border-primary/20 rounded-full text-primary font-medium text-sm mb-8">
+              <span className="w-2 h-2 bg-primary rounded-full mr-2 animate-pulse"></span>
+              Established 2018 • Licensed in UAE
+            </div>
+            
+            {/* Main Heading */}
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-heading font-bold mb-8">
               About{" "}
-              <span className="gradient-primary bg-clip-text text-transparent">
-                XERIC
+              <span className="relative">
+                <span className="gradient-primary bg-clip-text text-transparent">
+                  XERIC
+                </span>
+                <div className="absolute -bottom-2 left-0 right-0 h-1 gradient-primary rounded-full opacity-30"></div>
               </span>
             </h1>
-            <p className="text-xl text-foreground/80 leading-relaxed">
-              Based in the UAE, XERIC brings cutting-edge technologies in aerospace, energy, renewables, 
-              water, sewage, and infrastructure development to the MENA region, ensuring a positive impact 
-              on both the community and the environment.
+            
+            {/* Subtitle */}
+            <p className="text-xl md:text-2xl text-foreground/70 leading-relaxed mb-12 max-w-4xl mx-auto">
+              Pioneering sustainable infrastructure solutions across the MENA region with cutting-edge technology 
+              in <span className="text-primary font-semibold">aerospace</span>, <span className="text-accent font-semibold">renewable energy</span>, 
+              and <span className="text-secondary font-semibold">water treatment</span>.
             </p>
+            
+            {/* Stats */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+              <div className="text-center">
+                <div className="text-3xl md:text-4xl font-bold text-primary mb-2">6+</div>
+                <div className="text-foreground/60 font-medium">Years Experience</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl md:text-4xl font-bold text-accent mb-2">500+</div>
+                <div className="text-foreground/60 font-medium">Projects Completed</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl md:text-4xl font-bold text-secondary mb-2">15+</div>
+                <div className="text-foreground/60 font-medium">MENA Countries</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl md:text-4xl font-bold text-orange mb-2">3</div>
+                <div className="text-foreground/60 font-medium">ISO Certifications</div>
+              </div>
+            </div>
+          </div>
+          
+          {/* Scroll Indicator */}
+          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+            <div className="flex flex-col items-center animate-bounce">
+              <span className="text-foreground/60 text-sm mb-2">Learn More</span>
+              <ArrowDown className="w-5 h-5 text-foreground/60" />
+            </div>
           </div>
         </div>
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-16">
+      <section className="py-24 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div className="bg-white border border-border rounded-2xl p-8">
@@ -107,7 +152,7 @@ const About = () => {
       </section>
 
       {/* Core Values */}
-      <section className="py-16 bg-muted/30">
+      <section className="py-24">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4 text-primary">Our Core Values</h2>
@@ -132,7 +177,7 @@ const About = () => {
       </section>
 
       {/* Company Timeline */}
-      <section className="py-16">
+      <section className="py-24 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4 text-primary">Our Journey</h2>
@@ -163,7 +208,7 @@ const About = () => {
       </section>
 
       {/* Certifications */}
-      <section className="py-16 bg-muted/30">
+      <section className="py-24">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4 text-primary">Quality Certifications</h2>
@@ -188,7 +233,7 @@ const About = () => {
       </section>
 
       {/* Company Details */}
-      <section className="py-16">
+      <section className="py-24 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="bg-white border border-border rounded-2xl p-8">

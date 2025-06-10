@@ -84,46 +84,46 @@ const Contact = () => {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="pt-24 pb-20 bg-background">
+      <section className="pt-24 pb-12 bg-background">
         <div className="container mx-auto px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center space-y-8">
+          <div className="max-w-4xl mx-auto text-center space-y-6">
             
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/5 border border-primary/10 rounded-full">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full">
               <CheckCircle className="w-4 h-4 text-primary" />
               <span className="text-sm font-medium text-primary">Let's Connect</span>
             </div>
             
             {/* Main Heading */}
-            <div className="space-y-6">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+            <div className="space-y-4">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-foreground">
                 Get in{" "}
                 <span className="text-primary">Touch</span>
               </h1>
               
-              <p className="text-lg md:text-xl text-foreground/70 leading-relaxed max-w-3xl mx-auto">
+              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
                 Ready to transform your business with sustainable technology solutions? Let's discuss 
                 your project and explore how XERIC can help you achieve your goals.
               </p>
             </div>
             
             {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-12">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-primary mb-2">24/7</div>
-                <div className="text-sm text-foreground/60 font-medium">Support</div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-8">
+              <div className="text-center space-y-1">
+                <div className="text-2xl md:text-3xl font-bold text-primary">24/7</div>
+                <div className="text-sm text-muted-foreground font-medium">Support</div>
               </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-primary mb-2">< 24h</div>
-                <div className="text-sm text-foreground/60 font-medium">Response Time</div>
+              <div className="text-center space-y-1">
+                <div className="text-2xl md:text-3xl font-bold text-primary">&lt;24h</div>
+                <div className="text-sm text-muted-foreground font-medium">Response Time</div>
               </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-primary mb-2">7+</div>
-                <div className="text-sm text-foreground/60 font-medium">Service Areas</div>
+              <div className="text-center space-y-1">
+                <div className="text-2xl md:text-3xl font-bold text-primary">7+</div>
+                <div className="text-sm text-muted-foreground font-medium">Service Areas</div>
               </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-primary mb-2">MENA</div>
-                <div className="text-sm text-foreground/60 font-medium">Region Focus</div>
+              <div className="text-center space-y-1">
+                <div className="text-2xl md:text-3xl font-bold text-primary">MENA</div>
+                <div className="text-sm text-muted-foreground font-medium">Region Focus</div>
               </div>
             </div>
           </div>
@@ -131,20 +131,20 @@ const Contact = () => {
       </section>
 
       {/* Contact Form & Info */}
-      <section className="py-20 bg-muted/30">
+      <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 xl:grid-cols-3 gap-12">
             
             {/* Contact Form */}
             <div className="xl:col-span-2">
-              <div className="bg-white border border-border rounded-xl p-8 shadow-sm">
-                <h2 className="text-3xl font-bold mb-8 text-foreground">Send us a Message</h2>
+              <div className="bg-card border border-border rounded-xl p-8 shadow-sm">
+                <h2 className="text-2xl md:text-3xl font-bold mb-6 text-foreground">Send us a Message</h2>
                 
                 <form onSubmit={handleSubmit} className="space-y-6">
                   {/* Name & Email */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <label htmlFor="name" className="block text-sm font-medium mb-2 text-foreground">
+                    <div className="space-y-2">
+                      <label htmlFor="name" className="block text-sm font-medium text-foreground">
                         Full Name *
                       </label>
                       <input
@@ -154,12 +154,12 @@ const Contact = () => {
                         value={formData.name}
                         onChange={handleInputChange}
                         required
-                        className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors bg-background"
+                        className="w-full px-4 py-3 border border-input rounded-lg focus:ring-2 focus:ring-ring focus:border-transparent transition-colors bg-background text-foreground placeholder:text-muted-foreground"
                         placeholder="John Doe"
                       />
                     </div>
-                    <div>
-                      <label htmlFor="email" className="block text-sm font-medium mb-2 text-foreground">
+                    <div className="space-y-2">
+                      <label htmlFor="email" className="block text-sm font-medium text-foreground">
                         Email Address *
                       </label>
                       <input
@@ -169,7 +169,7 @@ const Contact = () => {
                         value={formData.email}
                         onChange={handleInputChange}
                         required
-                        className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors bg-background"
+                        className="w-full px-4 py-3 border border-input rounded-lg focus:ring-2 focus:ring-ring focus:border-transparent transition-colors bg-background text-foreground placeholder:text-muted-foreground"
                         placeholder="john@company.com"
                       />
                     </div>
@@ -177,8 +177,8 @@ const Contact = () => {
 
                   {/* Phone & Company */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <label htmlFor="phone" className="block text-sm font-medium mb-2 text-foreground">
+                    <div className="space-y-2">
+                      <label htmlFor="phone" className="block text-sm font-medium text-foreground">
                         Phone Number
                       </label>
                       <input
@@ -187,12 +187,12 @@ const Contact = () => {
                         name="phone"
                         value={formData.phone}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors bg-background"
+                        className="w-full px-4 py-3 border border-input rounded-lg focus:ring-2 focus:ring-ring focus:border-transparent transition-colors bg-background text-foreground placeholder:text-muted-foreground"
                         placeholder="+971-4-123-4567"
                       />
                     </div>
-                    <div>
-                      <label htmlFor="company" className="block text-sm font-medium mb-2 text-foreground">
+                    <div className="space-y-2">
+                      <label htmlFor="company" className="block text-sm font-medium text-foreground">
                         Company Name
                       </label>
                       <input
@@ -201,15 +201,15 @@ const Contact = () => {
                         name="company"
                         value={formData.company}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors bg-background"
+                        className="w-full px-4 py-3 border border-input rounded-lg focus:ring-2 focus:ring-ring focus:border-transparent transition-colors bg-background text-foreground placeholder:text-muted-foreground"
                         placeholder="Your Company"
                       />
                     </div>
                   </div>
 
                   {/* Service Interest */}
-                  <div>
-                    <label htmlFor="service" className="block text-sm font-medium mb-2 text-foreground">
+                  <div className="space-y-2">
+                    <label htmlFor="service" className="block text-sm font-medium text-foreground">
                       Service Interest
                     </label>
                     <select
@@ -217,7 +217,7 @@ const Contact = () => {
                       name="service"
                       value={formData.service}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors bg-background"
+                      className="w-full px-4 py-3 border border-input rounded-lg focus:ring-2 focus:ring-ring focus:border-transparent transition-colors bg-background text-foreground"
                     >
                       <option value="">Select a service</option>
                       {services.map((service, index) => (
@@ -227,8 +227,8 @@ const Contact = () => {
                   </div>
 
                   {/* Subject */}
-                  <div>
-                    <label htmlFor="subject" className="block text-sm font-medium mb-2 text-foreground">
+                  <div className="space-y-2">
+                    <label htmlFor="subject" className="block text-sm font-medium text-foreground">
                       Subject *
                     </label>
                     <input
@@ -238,14 +238,14 @@ const Contact = () => {
                       value={formData.subject}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors bg-background"
+                      className="w-full px-4 py-3 border border-input rounded-lg focus:ring-2 focus:ring-ring focus:border-transparent transition-colors bg-background text-foreground placeholder:text-muted-foreground"
                       placeholder="How can we help you?"
                     />
                   </div>
 
                   {/* Message */}
-                  <div>
-                    <label htmlFor="message" className="block text-sm font-medium mb-2 text-foreground">
+                  <div className="space-y-2">
+                    <label htmlFor="message" className="block text-sm font-medium text-foreground">
                       Message *
                     </label>
                     <textarea
@@ -255,7 +255,7 @@ const Contact = () => {
                       onChange={handleInputChange}
                       required
                       rows={6}
-                      className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors bg-background resize-none"
+                      className="w-full px-4 py-3 border border-input rounded-lg focus:ring-2 focus:ring-ring focus:border-transparent transition-colors bg-background text-foreground placeholder:text-muted-foreground resize-none"
                       placeholder="Tell us about your project requirements, timeline, and any specific questions you have..."
                     />
                   </div>
@@ -263,7 +263,7 @@ const Contact = () => {
                   {/* Submit Button */}
                   <button
                     type="submit"
-                    className="w-full bg-primary text-white py-3 px-6 rounded-lg hover:bg-primary/90 transition-colors font-medium flex items-center justify-center gap-2 shadow-sm"
+                    className="w-full bg-primary text-primary-foreground py-3 px-6 rounded-lg hover:bg-primary/90 transition-colors font-medium flex items-center justify-center gap-2 shadow-sm"
                   >
                     <Send className="w-4 h-4" />
                     Send Message
@@ -275,15 +275,15 @@ const Contact = () => {
             {/* Contact Information */}
             <div className="space-y-6">
               {contactInfo.map((info, index) => (
-                <div key={index} className="bg-white border border-border rounded-xl p-6 hover:shadow-sm transition-shadow">
+                <div key={index} className="bg-card border border-border rounded-xl p-6 hover:shadow-sm transition-shadow">
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary">
+                    <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary flex-shrink-0">
                       {info.icon}
                     </div>
-                    <div className="flex-1">
+                    <div className="flex-1 min-w-0">
                       <h3 className="font-semibold mb-2 text-foreground">{info.title}</h3>
                       {info.details.map((detail, idx) => (
-                        <p key={idx} className="text-foreground/70 text-sm mb-1">
+                        <p key={idx} className="text-muted-foreground text-sm mb-1 break-words">
                           {detail}
                         </p>
                       ))}
@@ -297,18 +297,18 @@ const Contact = () => {
       </section>
 
       {/* Map Section */}
-      <section className="py-20">
+      <section className="py-16">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">Visit Our Office</h2>
-            <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
+            <h2 className="text-2xl md:text-3xl font-bold mb-4 text-foreground">Visit Our Office</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Located in the heart of Dubai's industrial sector, we're easily accessible 
               and ready to meet with you to discuss your sustainable technology needs.
             </p>
           </div>
           
           <div className="max-w-4xl mx-auto">
-            <div className="bg-white border border-border rounded-xl p-6 shadow-sm">
+            <div className="bg-card border border-border rounded-xl p-6 shadow-sm">
               <div className="aspect-w-16 aspect-h-9 bg-muted rounded-lg overflow-hidden mb-8">
                 <iframe
                   src="https://maps.google.com/maps?q=Ras+Al+Khor+Industrial+Second,+Dubai,+UAE&t=&z=13&ie=UTF8&iwloc=&output=embed"
@@ -329,21 +329,21 @@ const Contact = () => {
                     <Building className="w-6 h-6 text-primary" />
                   </div>
                   <h3 className="font-semibold text-foreground mb-1">Dubai Office</h3>
-                  <p className="text-foreground/70 text-sm">Main Headquarters</p>
+                  <p className="text-muted-foreground text-sm">Main Headquarters</p>
                 </div>
                 <div className="text-center">
                   <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-3">
                     <Clock className="w-6 h-6 text-primary" />
                   </div>
                   <h3 className="font-semibold text-foreground mb-1">Working Hours</h3>
-                  <p className="text-foreground/70 text-sm">Sun-Thu: 9AM-6PM GST</p>
+                  <p className="text-muted-foreground text-sm">Sun-Thu: 9AM-6PM GST</p>
                 </div>
                 <div className="text-center">
                   <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-3">
                     <Phone className="w-6 h-6 text-primary" />
                   </div>
                   <h3 className="font-semibold text-foreground mb-1">Contact</h3>
-                  <p className="text-foreground/70 text-sm">+971-4-123-4567</p>
+                  <p className="text-muted-foreground text-sm">+971-4-123-4567</p>
                 </div>
               </div>
             </div>

@@ -18,7 +18,7 @@ export function AnimatedShinyText({
   return (
     <div
       className={cn(
-        "mx-auto max-w-md text-neutral-600/50 dark:text-neutral-400/50",
+        "relative overflow-hidden",
         className,
       )}
       style={
@@ -27,7 +27,7 @@ export function AnimatedShinyText({
         } as CSSProperties
       }
     >
-      <div className="animate-shimmer bg-clip-text bg-no-repeat [background-position:0_0] [background-size:var(--shimmer-width)_100%] [background-image:linear-gradient(110deg,transparent,rgba(255,255,255,0.7),transparent)]">
+      <div className="animate-shimmer bg-clip-text bg-no-repeat [background-position:0_0] [background-size:var(--shimmer-width)_100%] [background-image:linear-gradient(110deg,transparent,rgba(255,255,255,0.9),transparent)] relative z-10">
         {children}
       </div>
     </div>

@@ -138,10 +138,10 @@ const Navbar = () => {
             >
               <div
                 className={cn(
-                  "group rounded-full border border-primary/20 bg-primary text-white transition-all ease-in hover:cursor-pointer hover:bg-primary/90 hover:border-primary/40 shadow-lg hover:shadow-xl hover:scale-105",
+                  "group rounded-full border border-primary/20 bg-primary text-white transition-all ease-in hover:cursor-pointer hover:bg-primary/90 hover:border-primary/40 shadow-lg hover:shadow-xl hover:scale-105 overflow-hidden",
                 )}
               >
-                <AnimatedShinyText className="inline-flex items-center justify-center px-8 py-3 transition ease-out text-white font-semibold">
+                <AnimatedShinyText className="inline-flex items-center justify-center px-8 py-3 transition ease-out text-white font-semibold min-w-[140px]" shimmerWidth={150}>
                   <span>Get Quote</span>
                   <ArrowRightIcon className="ml-2 size-4 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
                 </AnimatedShinyText>

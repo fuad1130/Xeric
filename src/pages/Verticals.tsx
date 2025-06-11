@@ -2,6 +2,7 @@
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Building, Cpu, Smartphone, Zap, Shield, Cloud, Database, Globe, CheckCircle } from 'lucide-react';
+import { BlurFade } from '@/components/magicui/blur-fade';
 
 const Verticals = () => {
   const services = [
@@ -108,42 +109,45 @@ const Verticals = () => {
           <div className="max-w-4xl mx-auto text-center space-y-8">
             
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/5 border border-primary/10 rounded-full">
-              <CheckCircle className="w-4 h-4 text-primary" />
-              <span className="text-sm font-medium text-primary">Comprehensive Solutions Portfolio</span>
-            </div>
+            <BlurFade delay={0.1} inView>
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/5 border border-primary/10 rounded-full">
+                <CheckCircle className="w-4 h-4 text-primary" />
+                <span className="text-sm font-medium text-primary">Comprehensive Solutions Portfolio</span>
+              </div>
+            </BlurFade>
             
             {/* Main Heading */}
             <div className="space-y-6">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                Our{" "}
-                <span className="text-primary">Services</span>
-              </h1>
+              <BlurFade delay={0.2} inView>
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+                  Our{" "}
+                  <span className="text-primary">Services</span>
+                </h1>
+              </BlurFade>
               
-              <p className="text-lg md:text-xl text-foreground/70 leading-relaxed max-w-3xl mx-auto">
-                Comprehensive sustainable solutions tailored for the MENA region, delivering cutting-edge 
-                technology services that drive environmental responsibility and operational excellence.
-              </p>
+              <BlurFade delay={0.3} inView>
+                <p className="text-lg md:text-xl text-foreground/70 leading-relaxed max-w-3xl mx-auto">
+                  Comprehensive sustainable solutions tailored for the MENA region, delivering cutting-edge 
+                  technology services that drive environmental responsibility and operational excellence.
+                </p>
+              </BlurFade>
             </div>
             
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-12">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-primary mb-2">7+</div>
-                <div className="text-sm text-foreground/60 font-medium">Service Areas</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-primary mb-2">500+</div>
-                <div className="text-sm text-foreground/60 font-medium">Projects</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-primary mb-2">ISO</div>
-                <div className="text-sm text-foreground/60 font-medium">Certified</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-primary mb-2">24/7</div>
-                <div className="text-sm text-foreground/60 font-medium">Support</div>
-              </div>
+              {[
+                { value: "7+", label: "Service Areas" },
+                { value: "500+", label: "Projects" },
+                { value: "ISO", label: "Certified" },
+                { value: "24/7", label: "Support" }
+              ].map((stat, index) => (
+                <BlurFade key={stat.label} delay={0.4 + index * 0.1} inView>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-primary mb-2">{stat.value}</div>
+                    <div className="text-sm text-foreground/60 font-medium">{stat.label}</div>
+                  </div>
+                </BlurFade>
+              ))}
             </div>
           </div>
         </div>
@@ -154,46 +158,48 @@ const Verticals = () => {
         <div className="container mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {services.map((service, index) => (
-              <div key={index} className="bg-white border border-border rounded-xl p-8 hover:shadow-lg transition-all duration-300 group">
-                {/* Header */}
-                <div className="flex items-start gap-4 mb-6">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
-                    {service.icon}
+              <BlurFade key={index} delay={0.1 + index * 0.1} inView>
+                <div className="bg-white border border-border rounded-xl p-8 hover:shadow-lg transition-all duration-300 group">
+                  {/* Header */}
+                  <div className="flex items-start gap-4 mb-6">
+                    <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+                      {service.icon}
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-xl font-semibold mb-3 text-foreground">{service.title}</h3>
+                      <p className="text-foreground/70 leading-relaxed">{service.description}</p>
+                    </div>
                   </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-semibold mb-3 text-foreground">{service.title}</h3>
-                    <p className="text-foreground/70 leading-relaxed">{service.description}</p>
-                  </div>
-                </div>
 
-                {/* Features */}
-                <div className="mb-6">
-                  <h4 className="font-semibold mb-3 text-foreground">Key Solutions:</h4>
-                  <ul className="space-y-2">
-                    {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-start gap-2">
-                        <CheckCircle className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
-                        <span className="text-foreground/70 text-sm">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                  {/* Features */}
+                  <div className="mb-6">
+                    <h4 className="font-semibold mb-3 text-foreground">Key Solutions:</h4>
+                    <ul className="space-y-2">
+                      {service.features.map((feature, idx) => (
+                        <li key={idx} className="flex items-start gap-2">
+                          <CheckCircle className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                          <span className="text-foreground/70 text-sm">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
 
-                {/* Technologies */}
-                <div>
-                  <h4 className="font-semibold mb-3 text-foreground">Technologies:</h4>
-                  <div className="flex flex-wrap gap-2">
-                    {service.technologies.map((tech, idx) => (
-                      <span 
-                        key={idx} 
-                        className="px-3 py-1 bg-primary/5 text-primary rounded-md text-xs font-medium border border-primary/10"
-                      >
-                        {tech}
-                      </span>
-                    ))}
+                  {/* Technologies */}
+                  <div>
+                    <h4 className="font-semibold mb-3 text-foreground">Technologies:</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {service.technologies.map((tech, idx) => (
+                        <span 
+                          key={idx} 
+                          className="px-3 py-1 bg-primary/5 text-primary rounded-md text-xs font-medium border border-primary/10"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </div>
-              </div>
+              </BlurFade>
             ))}
           </div>
         </div>
@@ -203,21 +209,27 @@ const Verticals = () => {
       <section className="py-20">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center space-y-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-              Ready to Transform Your Operations?
-            </h2>
-            <p className="text-lg text-foreground/70 leading-relaxed">
-              Partner with XERIC to leverage cutting-edge sustainable technology solutions 
-              tailored to your industry's unique needs across the MENA region.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-              <button className="px-8 py-3 bg-primary text-white rounded-lg hover:bg-primary/90 transition-all font-medium">
-                Schedule Consultation
-              </button>
-              <button className="px-8 py-3 border border-border text-foreground rounded-lg hover:bg-muted/50 transition-all font-medium">
-                Download Brochure
-              </button>
-            </div>
+            <BlurFade delay={0.1} inView>
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+                Ready to Transform Your Operations?
+              </h2>
+            </BlurFade>
+            <BlurFade delay={0.2} inView>
+              <p className="text-lg text-foreground/70 leading-relaxed">
+                Partner with XERIC to leverage cutting-edge sustainable technology solutions 
+                tailored to your industry's unique needs across the MENA region.
+              </p>
+            </BlurFade>
+            <BlurFade delay={0.3} inView>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+                <button className="px-8 py-3 bg-primary text-white rounded-lg hover:bg-primary/90 transition-all font-medium">
+                  Schedule Consultation
+                </button>
+                <button className="px-8 py-3 border border-border text-foreground rounded-lg hover:bg-muted/50 transition-all font-medium">
+                  Download Brochure
+                </button>
+              </div>
+            </BlurFade>
           </div>
         </div>
       </section>

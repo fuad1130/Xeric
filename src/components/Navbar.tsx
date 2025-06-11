@@ -1,6 +1,7 @@
 
 import { useState } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
+import { ArrowRightIcon } from "@radix-ui/react-icons";
 import { Link, useLocation } from 'react-router-dom';
 import {
   NavigationMenu,
@@ -10,6 +11,8 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
+import { AnimatedShinyText } from "@/components/magicui/animated-shiny-text";
+import { cn } from "@/lib/utils";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -131,9 +134,18 @@ const Navbar = () => {
             
             <Link 
               to="/contact"
-              className="ml-6 gradient-primary text-white px-8 py-3 rounded-xl hover:opacity-90 hover:scale-105 hover:shadow-xl transition-all duration-300 font-semibold shadow-lg border border-primary/20 hover:border-primary/40"
+              className="ml-6"
             >
-              Get Quote
+              <div
+                className={cn(
+                  "group rounded-full border border-primary/20 bg-primary text-white transition-all ease-in hover:cursor-pointer hover:bg-primary/90 hover:border-primary/40 shadow-lg hover:shadow-xl hover:scale-105",
+                )}
+              >
+                <AnimatedShinyText className="inline-flex items-center justify-center px-8 py-3 transition ease-out text-white font-semibold">
+                  <span>Get Quote</span>
+                  <ArrowRightIcon className="ml-2 size-4 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
+                </AnimatedShinyText>
+              </div>
             </Link>
           </div>
 

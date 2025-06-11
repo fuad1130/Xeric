@@ -203,11 +203,11 @@
 
   /* Shimmer effect for animated shiny text */
   .animate-shimmer {
-    animation: shimmer 3s ease-in-out infinite;
+    animation: shimmer 2.8s ease-in-out infinite;
   }
 
   .animate-shimmer-continuous {
-    animation: shimmer-continuous 2.5s linear infinite;
+    animation: shimmer-continuous 2.2s linear infinite;
   }
 
   @keyframes shimmer {

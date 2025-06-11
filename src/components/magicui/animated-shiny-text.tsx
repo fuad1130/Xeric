@@ -32,28 +32,28 @@ export function AnimatedShinyText({
         {children}
       </div>
       
-      {/* Animated shimmer overlay */}
+      {/* Primary shimmer overlay - more visible */}
       <div 
-        className="absolute inset-0 z-20 animate-shimmer bg-gradient-to-r from-transparent via-white/40 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"
+        className="absolute inset-0 z-20 animate-shimmer bg-gradient-to-r from-transparent via-white/70 to-transparent opacity-60 group-hover:opacity-100 transition-opacity duration-300"
         style={{
           backgroundSize: `${shimmerWidth}px 100%`,
           backgroundPosition: '-100% 0',
           backgroundRepeat: 'no-repeat',
-          WebkitMask: 'linear-gradient(90deg, transparent, black, transparent)',
-          mask: 'linear-gradient(90deg, transparent, black, transparent)',
+          WebkitMask: 'linear-gradient(90deg, transparent 20%, black 50%, transparent 80%)',
+          mask: 'linear-gradient(90deg, transparent 20%, black 50%, transparent 80%)',
         }}
       />
       
-      {/* Continuous shimmer effect */}
+      {/* Continuous shimmer effect - brighter */}
       <div 
         className="absolute inset-0 z-15 animate-shimmer-continuous"
         style={{
-          background: `linear-gradient(110deg, transparent 25%, rgba(255,255,255,0.8) 50%, transparent 75%)`,
+          background: `linear-gradient(110deg, transparent 20%, rgba(255,255,255,0.9) 40%, rgba(255,255,255,1) 50%, rgba(255,255,255,0.9) 60%, transparent 80%)`,
           backgroundSize: `${shimmerWidth * 2}px 100%`,
           backgroundPosition: '-200% 0',
           backgroundRepeat: 'no-repeat',
-          WebkitMask: 'linear-gradient(90deg, transparent, black, transparent)',
-          mask: 'linear-gradient(90deg, transparent, black, transparent)',
+          WebkitMask: 'linear-gradient(90deg, transparent 15%, black 50%, transparent 85%)',
+          mask: 'linear-gradient(90deg, transparent 15%, black 50%, transparent 85%)',
         }}
       />
     </div>

@@ -1,4 +1,3 @@
-
 import { Building, Contact, Home, Info, MapPin, Phone, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -11,9 +10,14 @@ const Footer = () => {
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-4 mb-6">
               <img 
-                src="/lovable-uploads/a6bb8ad6-f5e0-41c1-b633-e16c28b32e16.png" 
+                src="/lovable-uploads/e89d63d2-e31b-443a-bf94-ad8b75361320.png" 
                 alt="XERIC Logo" 
                 className="h-12 w-auto"
+                onError={(e) => {
+                  console.log('Footer logo failed to load:', e);
+                  e.currentTarget.style.display = 'none';
+                }}
+                onLoad={() => console.log('Footer logo loaded successfully')}
               />
               <div className="flex flex-col">
                 <span className="text-xl font-heading font-bold">

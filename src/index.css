@@ -203,7 +203,11 @@
 
   /* Shimmer effect for animated shiny text */
   .animate-shimmer {
-    animation: shimmer 2s ease-in-out infinite;
+    animation: shimmer 3s ease-in-out infinite;
+  }
+
+  .animate-shimmer-continuous {
+    animation: shimmer-continuous 2.5s linear infinite;
   }
 
   @keyframes shimmer {
@@ -212,6 +216,15 @@
     }
     100% {
       background-position: 200% 0;
+    }
+  }
+
+  @keyframes shimmer-continuous {
+    0% {
+      background-position: -300% 0;
+    }
+    100% {
+      background-position: 300% 0;
     }
   }
 

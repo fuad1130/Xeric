@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { ArrowRightIcon } from "@radix-ui/react-icons";
@@ -138,12 +137,12 @@ const Navbar = () => {
             >
               <div
                 className={cn(
-                  "group rounded-full border border-primary/20 bg-primary text-white transition-all ease-in hover:cursor-pointer hover:bg-primary/90 hover:border-primary/40 shadow-lg hover:shadow-xl hover:scale-105 overflow-hidden",
+                  "group relative rounded-full border border-primary/30 bg-primary text-white transition-all ease-in hover:cursor-pointer hover:bg-primary/90 hover:border-primary/50 shadow-lg hover:shadow-xl hover:scale-[1.02] overflow-hidden min-w-[160px]",
                 )}
               >
-                <AnimatedShinyText className="inline-flex items-center justify-center px-8 py-3 transition ease-out text-white font-semibold min-w-[140px]" shimmerWidth={150}>
-                  <span>Get Quote</span>
-                  <ArrowRightIcon className="ml-2 size-4 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
+                <AnimatedShinyText className="inline-flex items-center justify-center px-6 py-3 transition ease-out text-white font-semibold text-sm tracking-wide" shimmerWidth={200}>
+                  <span className="relative z-30">Get Quote</span>
+                  <ArrowRightIcon className="ml-2 size-4 transition-transform duration-300 ease-in-out group-hover:translate-x-1 relative z-30" />
                 </AnimatedShinyText>
               </div>
             </Link>
